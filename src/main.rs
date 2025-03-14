@@ -5,7 +5,7 @@ use std::path::{Path, PathBuf};
 
 #[get("/")]
 async fn index() -> Result<NamedFile, Status> {
-    NamedFile::open(Path::new("client/index.html"))
+    NamedFile::open(Path::new("client/dist/index.html"))
         .await
         .map_err(|_| Status::NotFound)
 }
