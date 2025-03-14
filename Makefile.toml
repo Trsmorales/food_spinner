@@ -1,7 +1,7 @@
-[tasks.start-client]
-description = "Start the React (or Vite) client"
+[tasks.build-client]
+description = "Build the React (or Vite) client"
 command = "pnpm"
-args = ["run", "dev"]
+args = ["run", "build"]
 cwd = "client"
 
 [tasks.start-server]
@@ -11,4 +11,4 @@ args = ["run"]
 
 [tasks.start]
 description = "Run both client and server"
-run_task = { name = ["start-client", "start-server"], parallel = true }
+run_task = { name = ["build-client", "start-server"], parallel = false }
