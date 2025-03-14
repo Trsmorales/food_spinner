@@ -1,0 +1,14 @@
+[tasks.start-client]
+description = "Start the React (or Vite) client"
+command = "pnpm"
+args = ["run", "dev"]
+cwd = "client"
+
+[tasks.start-server]
+description = "Start the Rocket server"
+command = "cargo"
+args = ["run"]
+
+[tasks.start]
+description = "Run both client and server"
+run_task = { name = ["start-client", "start-server"], parallel = true }
