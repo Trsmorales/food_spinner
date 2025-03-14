@@ -1,0 +1,9 @@
+[package]
+name = "food_spinner"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+hyper = { version = "0.14", features = ["server", "http1", "tcp"] }
+tokio = { version = "1", features = ["full"] }
+rocket = "0.5.1"
