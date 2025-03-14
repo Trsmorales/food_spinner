@@ -12,7 +12,7 @@ async fn index() -> Result<NamedFile, Status> {
 
 #[get("/<file..>")]
 async fn files(file: PathBuf) -> Result<NamedFile, Status> {
-    NamedFile::open(Path::new("client/").join(file))
+    NamedFile::open(Path::new("client/dist/").join(file))
         .await
         .map_err(|_| Status::NotFound)
 }
